@@ -1,5 +1,5 @@
 //Creazione lista email accettate
-const emails = ["demo@gmail.com" , "ale@gmail.com", "ale@gmail.com", "davide@gmail.com", "grande@gmail.com", "ok@gmail.com" , 17 ];
+const emails = ["demo@gmail.com" , "ale@gmail.com", "ale@gmail.com", "davide@gmail.com", "grande@gmail.com", "ok@gmail.com"];
 
 //select the container in html
 const container = document.getElementById("container");
@@ -12,6 +12,7 @@ console.log(button);
 button.addEventListener('click',
     function(){
         const addedEmail = document.getElementById("text-email").value;
+        let messaggio = "You Are Not Invited"
         console.log(addedEmail);
 
         for (let i = 0; i < emails.length; i++){
@@ -19,13 +20,16 @@ button.addEventListener('click',
             const finalemail = emails[i];
        
 
-        if (finalemail === addedEmail){
-            console.log(finalemail);
-            container.innerHTML += `<div class="box col-email">Your email has been accepted</div>`;
+            if (finalemail === addedEmail){
+                console.log(finalemail);
+                messaggio = "Your Email Has Been Accepted";
             }
+            // else {
+            //     messaggio = "You Are Not In The List"
+            // };
+        }
 
-        else (container.innerHTML += `<div class="box col-email">Sorry. You are not in the list</div>`);
+        container.innerHTML = messaggio;
+
     }
-}
-
 )
