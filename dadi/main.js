@@ -1,6 +1,3 @@
-//Creazione lista email accettate
-const numbers = [1,2,3,4,5,6];
-
 //select the Pc container in html
 const containerPc = document.getElementById("container-pc");
 
@@ -38,7 +35,7 @@ buttonPc.addEventListener('click',
         containerUser.innerHTML = messaggioUser + numeroRandomUser;
         
 
-        if (numeroRandomPc > numeroRandomUser){
+        if (numeroRandomPc >= numeroRandomUser){
             document.getElementById("container-winner").innerHTML = "Pc won";
         }
 
