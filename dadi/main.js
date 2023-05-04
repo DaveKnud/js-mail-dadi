@@ -22,7 +22,6 @@ console.log(buttonUser);
 //add 'click' to PC button
 buttonPc.addEventListener('click',
     function(){
-
         //Creazione Numero random Pc
         const numeroRandomPc = Math.floor(Math.random()*6 +1);
         let messaggioPc = "Il numero del computer e' ";
@@ -40,6 +39,13 @@ buttonPc.addEventListener('click',
         }
 
         else document.getElementById("container-winner").innerHTML = "You won";
+
+          //DECORATION
+          document.getElementById("container-winner").style.backgroundColor = "yellow";
+          document.getElementById("container-pc").style.color = "red";
+          document.getElementById("container-pc").style.backgroundColor = "black";
+          document.getElementById("container-user").style.color = "yellow";
+          document.getElementById("container-user").style.backgroundColor = "blue";
     }
 )
 
@@ -47,10 +53,7 @@ buttonPc.addEventListener('click',
 
 
 
-//DECORATION
-document.getElementById("container-pc").style.color = "red";
-document.getElementById("container-pc").style.backgroundColor = "black";
 
-document.getElementById("container-user").style.color = "yellow";
-document.getElementById("container-user").style.backgroundColor = "blue";
+
+
 
