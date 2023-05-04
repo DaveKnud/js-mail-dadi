@@ -25,24 +25,27 @@ console.log(buttonUser);
 //add 'click' to PC button
 buttonPc.addEventListener('click',
     function(){
-        const numeroRandom = Math.floor(Math.random()*6 +1);
-        let numerouscito = numeroRandom
-        let messaggio = "Il numero del computer e' ";
-        console.log(numeroRandom);
-        containerPc.innerHTML = messaggio + numeroRandom;
-        }
-)
 
-//add 'click' to user button
-buttonUser.addEventListener('click',
-    function(){
-        const numeroRandom = Math.floor(Math.random()*6 +1);
-        let numerouscito = numeroRandom;
-        let messaggio = "Il tuo numero e' ";
-        console.log(numeroRandom); 
-        containerUser.innerHTML = messaggio + numeroRandom;
+        //Creazione Numero random Pc
+        const numeroRandomPc = Math.floor(Math.random()*6 +1);
+        let messaggioPc = "Il numero del computer e' ";
+        containerPc.innerHTML = messaggioPc + numeroRandomPc;
+
+
+        //Creazione numero random user
+        const numeroRandomUser = Math.floor(Math.random()*6 +1);
+        let messaggioUser = "Il tuo numero e' "; 
+        containerUser.innerHTML = messaggioUser + numeroRandomUser;
+        
+
+        if (numeroRandomPc > numeroRandomUser){
+            document.getElementById("container-winner").innerHTML = "Pc won";
+        }
+
+        else document.getElementById("container-winner").innerHTML = "You won";
     }
 )
+
 
 
 
